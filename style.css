@@ -1,6 +1,4 @@
-/* =========================
-   Root variables & base
-========================= */
+/* root variables & base */
 :root {
   --bg: #0f1724;
   --card: #0b1220;
@@ -32,18 +30,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* =========================
-   Container & Layout
-========================= */
+/* container & Layout */
 .container {
   width: min(var(--container-width), var(--max-width));
   margin: 0 auto;
   padding: 1rem;
 }
 
-/* =========================
-   Header
-========================= */
+/*  header */
 .site-header {
   padding: 1.25rem 0;
   border-bottom: 1px solid rgba(255,255,255,0.04);
@@ -62,9 +56,7 @@ body {
   margin: 0;
 }
 
-/* =========================
-   Filters nav
-========================= */
+/* Filters nav */
 .filters {
   display: flex;
   justify-content: space-between;
@@ -118,9 +110,7 @@ body {
   color: inherit;
 }
 
-/* =========================
-   Add Task Form
-========================= */
+/* add Task Form */
 .add-task-form {
   background: var(--glass);
   padding: 1rem;
@@ -174,9 +164,7 @@ body {
   transform: scale(1.05);
 }
 
-/* =========================
-   Task cards
-========================= */
+/* task cards */
 .task-list h2 {
   font-size: 1.1rem;
   margin: 0 0 0.5rem 0;
@@ -242,7 +230,7 @@ body {
   color: var(--accent-2);
 }
 
-/* Complete checkbox */
+/* complete checkbox */
 .complete-task {
   accent-color: var(--accent);
   transform: scale(1.2);
@@ -250,9 +238,7 @@ body {
   cursor: pointer;
 }
 
-/* =========================
-   Empty state & Footer
-========================= */
+/* empty state & footer */
 .empty-message {
   margin-top: 1rem;
   color: var(--muted);
@@ -268,9 +254,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* =========================
-   Responsive adjustments
-========================= */
+/* responsive adjustments */
 @media (max-width: 640px) {
   .filter-form {
     gap: 0.5rem;
@@ -288,9 +272,7 @@ body {
   }
 }
 
-/* =========================
-   Accessibility helper
-========================= */
+/* accessibility helper */
 .sr-only {
   position: absolute;
   width: 1px;
