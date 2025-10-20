@@ -1,11 +1,11 @@
 /* root variables & base */
 :root {
-  --bg: #0f1724;
-  --card: #0b1220;
-  --muted: #9aa4b2;
-  --accent: #6ee7b7;
-  --accent-2: #7dd3fc;
-  --glass: rgba(255,255,255,0.04);
+  --bg: #1a1334;           /* deep purple-blue background */
+  --card: #241c40;         /* slightly lighter purple-blue for cards */
+  --muted: #b0b3c0;        /* muted text stays readable */
+  --accent: #9b7de0;       /* main purple accent */
+  --accent-2: #6f8dfd;     /* secondary bluish accent */
+  --glass: rgba(36,28,64,0.05); /* glass overlay matching purple tone */
   --radius: 12px;
   --gap: 1rem;
   --container-width: 1100px;
@@ -13,11 +13,12 @@
   --accent-gradient: linear-gradient(135deg, var(--accent), var(--accent-2));
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   color-scheme: dark;
-  color: #e6eef6;
-  background: radial-gradient(1200px 400px at 15% 10%, rgba(45,55,72,0.25), transparent),
-              linear-gradient(180deg, #071023 0%, #071428 100%);
+  color: #e6eef6;          /* text color unchanged */
+  background: radial-gradient(1200px 400px at 15% 10%, rgba(36,28,64,0.25), transparent),
+              linear-gradient(180deg, #1a1334 0%, #1c1640 100%);
 }
 
+/* rest of your CSS stays the same */
 * {
   box-sizing: border-box;
 }
@@ -136,8 +137,8 @@ body {
 .add-task-form input,
 .add-task-form select,
 .add-task-form textarea {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(36,28,64,0.03); /* updated for purple theme */
+  border: 1px solid rgba(255,255,255,0.1);
   color: #e6eef6;
   border-radius: 8px;
   padding: 0.5rem;
@@ -193,7 +194,7 @@ body {
 }
 
 .card article {
-  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+  background: linear-gradient(180deg, rgba(36,28,64,0.01), rgba(36,28,64,0.02)); /* updated for purple */
   border-radius: var(--radius);
   padding: 1rem;
   box-shadow: 0 8px 30px rgba(2,6,23,0.6);
@@ -221,7 +222,7 @@ body {
 }
 
 .category {
-  background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  background: linear-gradient(90deg, rgba(36,28,64,0.03), rgba(36,28,64,0.01)); /* purple theme */
   padding: 0.15rem 0.45rem;
   border-radius: 999px;
   font-weight: 600;
