@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple To-Do Filter</title>
+  <meta name="description" content="A simple to-do filter app (Work, School, Personal) — semantic HTML, CSS, and JS." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>My To-Do List</h1>
+      <p class="tagline">Filter tasks by category — Work, School, Personal. Nice and simple.</p>
+    </div>
+  </header>
+
+  <nav aria-label="Task filters" class="filters container">
+    <form id="filterForm" class="filter-form">
+      <fieldset>
+        <legend>Categories</legend>
+        <label><input type="checkbox" name="category" value="work" checked /> Work</label>
+        <label><input type="checkbox" name="category" value="school" checked /> School</label>
+        <label><input type="checkbox" name="category" value="personal" checked /> Personal</label>
+      </fieldset>
+
+      <label for="search" class="sr-only">Search tasks</label>
+      <input id="search" name="search" type="search" placeholder="Search tasks..." />
+
+      <label for="sort" class="sr-only">Sort tasks</label>
+      <select id="sort" name="sort" aria-label="Sort tasks">
+        <option value="default">Sort: Default</option>
+        <option value="alpha">Sort: A → Z</option>
+        <option value="alpha-desc">Sort: Z → A</option>
+      </select>
+    </form>
+  </nav>
+
+  <main class="container" id="main">
+    <section aria-labelledby="active-heading" class="task-list">
+      <h2 id="active-heading">Tasks</h2>
+
+      <ul id="tasks" class="cards" role="list">
+        <!-- Each task is an <li> with semantic article inside. -->
+        <li class="card" data-category="work">
+          <article>
+            <header>
+              <h3>Prepare project status report</h3>
+              <p class="meta">Due: 2025-10-25 · <span class="category">Work</span></p>
+            </header>
+            <p>Compile metrics and send to the team before Friday standup.</p>
+          </article>
+        </li>
+
+        <li class="card" data-category="school">
+          <article>
+            <header>
+              <h3>Read Chapter 6 — Innovator's Dilemma</h3>
+              <p class="meta">Due: 2025-10-26 · <span class="category">School</span></p>
+            </header>
+            <p>Take notes on organizational culture and innovation for assignment.</p>
+          </article>
+        </li>
+
+        <li class="card" data-category="personal">
+          <article>
+            <header>
+              <h3>Buy cat food</h3>
+              <p class="meta">No due date · <span class="category">Personal</span></p>
+            </header>
+            <p>Pick up the recommended brand from the grocery store.</p>
+          </article>
+        </li>
+
+        <li class="card" data-category="work">
+          <article>
+            <header>
+              <h3>Review server logs</h3>
+              <p class="meta">Due: 2025-10-24 · <span class="category">Work</span></p>
+            </header>
+            <p>Check for errors and summarize findings for the Ops meeting.</p>
+          </article>
+        </li>
+
+        <li class="card" data-category="school">
+          <article>
+            <header>
+              <h3>Submit Cybercrime paper draft</h3>
+              <p class="meta">Due: 2025-10-30 · <span class="category">School</span></p>
+            </header>
+            <p>Ensure at least 3 academic sources are included.</p>
+          </article>
+        </li>
+
+        <li class="card" data-category="personal">
+          <article>
+            <header>
+              <h3>Call Mom</h3>
+              <p class="meta">No due date · <span class="category">Personal</span></p>
+            </header>
+            <p>Catch up and wish her a happy week.</p>
+          </article>
+        </li>
+      </ul>
+
+      <p id="empty" class="empty-message" hidden>No tasks match your filters.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer container" role="contentinfo">
+    <p>Made with semantic HTML, CSS, and JavaScript for class demo.</p>
+    <p><small>Tip: try unchecking all categories to see the empty state.</small></p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
